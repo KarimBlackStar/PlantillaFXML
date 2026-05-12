@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="gal.cotarelo.controller.FxmlController">
+
+    <top>
+        <MenuBar>
+            <Menu text="Archivo">
+                <MenuItem text="Nuevo" onAction="#onNuevo"/>
+                <MenuItem text="Abrir" onAction="#onAbrir"/>
+                <MenuItem text="Guardar" onAction="#onGuardar"/>
+                <MenuItem text="Cerrar Documento" onAction="#onCerrar"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Salir" onAction="#onSalir"/>
+            </Menu>
+            <Menu text="Editar">
+                <MenuItem text="Pasar a Mayúsculas" onAction="#onMayusculas"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TextArea fx:id="txtArea" wrapText="true"/>
+    </center>
+
+    <bottom>
+        <HBox spacing="5" padding="5">
+            <Label fx:id="lblEstado" text="Sin fichero"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
